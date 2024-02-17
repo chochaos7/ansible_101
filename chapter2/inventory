@@ -1,0 +1,18 @@
+# Application servers
+[app]
+192.168.121.144
+192.168.121.115
+
+# Database server
+[db]
+192.168.121.148
+
+# Group has all servers
+[multi:children]
+app
+db
+
+# Variables for all the servers
+[multi:vars]
+ansible_ssh_user=vagrant
+ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
