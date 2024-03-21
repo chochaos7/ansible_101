@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: Register a value
+      shell: 'echo The test'
+      register: foo
+
+    - name: Print the value
+      debug:
+        msg: "The variable is {{ foo.stdout }}"
