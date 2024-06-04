@@ -1,2 +1,2 @@
 ---
-apache_serve_name: httpd
+apache_service_name: httpd
